@@ -1,0 +1,129 @@
+:root {
+  --light-pink: #ffd1dc;
+  --pink: #ff69b4;
+  --dark-pink: #c2185b;
+  --light-brown: #d2b48c;
+  --nav-shadow: rgba(0, 0, 0, 0.08);
+  --hover-hue: rgba(0, 0, 0, 0.12);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 8px var(--nav-shadow);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 2rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.7rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: var(--pink);
+  background: linear-gradient(90deg, var(--light-pink), var(--pink), var(--dark-pink));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  list-style: none;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--dark-pink);
+  font-weight: 500;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  box-shadow: 0 2px 8px var(--hover-hue);
+  background: var(--hover-hue);
+}
+
+.cart-icon {
+  font-size: 1.3rem;
+  color: var(--pink);
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--pink);
+  cursor: pointer;
+  display: none;
+  padding: 0.5rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 1rem;
+    height: 60px;
+  }
+  
+  .logo {
+    font-size: 1.4rem;
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background: #fff;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 2rem;
+    gap: 1.5rem;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
+  }
+  
+  .nav-links.open {
+    transform: translateX(0);
+  }
+  
+  .hamburger {
+    display: block;
+  }
+  
+  .nav-links a {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+  }
+}
