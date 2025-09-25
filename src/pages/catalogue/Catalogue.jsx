@@ -3,6 +3,7 @@ import firstwig from '../../assets/16inchfrontalJerrycurl.jpg'
 import secondwig from '../../assets/18inchpixiesddwig.jpg'
 import thirdwig from '../../assets/2x6DDdeepwave.jpg'
 import './catalogue.css'
+import { useNavigate } from 'react-router-dom';
 
 const bestSellers = [
   {
@@ -38,6 +39,12 @@ const bestSellers = [
 
 ] 
 
+const onClick = () => {
+  console.log("Added to cart");
+  alert("Item added to cart");
+}
+
+
 function Catalogue() {
   return (
     <div className='catalogue-container'>
@@ -50,11 +57,14 @@ function Catalogue() {
             <h2 className='product-name'>{product.name}</h2>  
             <p className='product-price'>₦{product.price.toLocaleString()}</p>
             <p className='product-description'>{product.description}</p>
-            <ul className='product-details'>  
+            
+            <button className='add-to-cart-button' onClick={onClick}>Add to Cart</button>
+
+            {/* <ul className='product-details'>  
               <li><strong>Hair Type:</strong> {product.hairtype}</li>
               <li><strong>Length:</strong> {product.length}</li>
               <li><strong>Color:</strong> {product.color}</li>  
-            </ul>
+            </ul> */}
           </div>
         ))}
       </div>

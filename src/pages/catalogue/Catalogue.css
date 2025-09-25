@@ -26,19 +26,20 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
 }
-.product-details{
+/* .product-details{
     display: none;
     padding: 10px;
     color: palevioletred;
-}
+} */
 .product-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    .product-details{
-        display: block;
-    }
 }
-
+.add-to-cart-button{
+    color: white;
+    margin-top: 20px;
+    background-color: palevioletred;
+}
 @media (max-width: 768px) {
   .products {
     width: calc(100% - 0px);
