@@ -17,7 +17,6 @@ function MyNav() {
 
   const isActive = (path) => location.pathname === path;
 
-  // Close menu when route changes
   useEffect(() => {
     closeMenu();
   }, [location]);

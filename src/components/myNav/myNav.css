@@ -42,6 +42,7 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  margin-top: 30px;
 }
 
 .nav-links {
