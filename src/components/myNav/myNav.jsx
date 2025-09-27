@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FaShoppingCart, FaBars, FaTimes } from 'react-icons/fa';
+import logo from '../../assets/elexishairlogo.png';
 import './myNav.css';
 
 function MyNav() {
@@ -24,9 +25,7 @@ function MyNav() {
   return (
     <nav className="navbar">
       <div className="logo-container">
-        <Link to="/" className="logo" onClick={closeMenu}>
-          Elexishairs
-        </Link>
+        <img src={logo} alt="Elexishairs Logo" className="logo" />
       </div>
       
       <button className="hamburger" onClick={toggleMenu}>
