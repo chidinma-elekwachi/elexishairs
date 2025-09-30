@@ -17,9 +17,9 @@ const bestSellers = [
   {
     id: 1,
     image: firstwig,
-    name: '16 inch frontal Jerry curl',
-    price: 180000,
-    oldPrice: 200000,
+    name: '16 inch Jerry curl',
+    price: 100000,
+    oldPrice: 150000,
     description: 'This is a beautiful 16 inch frontal Jerry curl wig that gives you a natural look and feel. Perfect for any occasion.',
     hairtype: 'human hair',
     length: '16 inches',
@@ -29,8 +29,8 @@ const bestSellers = [
     id: 2,
     image: secondwig,
     name: '18 inch pixie sdd wig',
-    price: 195000,
-    oldPrice: 220000,
+    price: 165000,
+    oldPrice: 200000,
     description: 'This is a stunning 18 inch pixie sdd wig that offers a chic and stylish appearance. Ideal for everyday wear.',
     hairtype: 'human hair',
     length: '18 inches',
@@ -40,8 +40,8 @@ const bestSellers = [
     id: 3,
     image: thirdwig,
     name: '2x6 DD deep wave',
-    price: 250000,
-    oldPrice: 280000,
+    price: 175000,
+    oldPrice: 250000,
     description: 'This is a luxurious 2x6 DD deep wave wig that provides a voluminous and glamorous look. Great for special events.',
     hairtype: 'human hair',
     length: '20 inches',
@@ -51,8 +51,8 @@ const bestSellers = [
     id: 4,
     image: forthwig,
     name: '20 inch pixie bundle',
-    price: 300000,
-    oldPrice: 340000,
+    price: 85000,
+    oldPrice: 100000,
     description: 'This is a trendy 20 inch pixie bundle wig that delivers a bold and fashionable style. Perfect for making a statement.',
     hairtype: 'human hair',
     length: '20 inches',
@@ -61,8 +61,8 @@ const bestSellers = [
     id: 5,
     image: fifthwig,
     name: '4x4 brown bob wig',
-    price: 150000,
-    oldPrice: 170000,
+    price: 70000,
+    oldPrice: 80000,
     description: 'This is a chic 4x4 brown bob wig that offers a sleek and modern look. Suitable for both casual and formal occasions.',
     hairtype: 'human hair', 
     length: '12 inches',
@@ -70,10 +70,10 @@ const bestSellers = [
   },{
     id: 6,
     image: sixthwig, 
-    name: '20 inch pixie bundle and 4x4',
-    price: 450000,
-    oldPrice: 500000,
-    description: 'This is a versatile 20 inch pixie bundle and 4x4 wig that provides a dynamic and stylish appearance. Great for any event.',
+    name: '20 inch pixie bundle',
+    price: 250000,
+    oldPrice: 280000,
+    description: 'This is a 20 inch pixie bundle and 4x4 wig that provides a dynamic and stylish appearance. Great for any event.',
     hairtype: 'human hair',
     length: '20 inches',
     color: 'natural black',
@@ -81,8 +81,8 @@ const bestSellers = [
     id: 7,
     image: seventhwig,
     name: '4x4 jerry curl wig',
-    price: 200000,
-    oldPrice: 220000,
+    price: 86000,
+    oldPrice: 150000,
     description: 'This is a beautiful 4x4 jerry curl wig that gives you a natural look and feel. Perfect for any occasion.',
     hairtype: 'human hair',
     length: '14 inches',
@@ -101,8 +101,8 @@ const bestSellers = [
     id: 9,
     image: ninthwig,
     name: '5x5 piano bounce',
-    price: 220000,
-    oldPrice: 250000,
+    price: 110000,
+    oldPrice: 150000,
     description: 'This is a stunning 5x5 piano bounce wig that provides a voluminous and glamorous look. Great for special events.',
     hairtype: 'human hair',
     length: '16 inches',
@@ -111,8 +111,8 @@ const bestSellers = [
     id: 10,
     image: tenthwig,
     name: 'Body wave',
-    price: 200000,
-    oldPrice: 230000,
+    price: 100000,
+    oldPrice: 130000,
     description: 'This is a luxurious body wave wig that delivers a smooth and elegant appearance. Perfect for any occasion.',
     hairtype: 'human hair',
     length: '18 inches',
@@ -121,8 +121,8 @@ const bestSellers = [
     id: 11,
     image: eleventhwig,
     name: 'DD blonde wig',
-    price: 250000,
-    oldPrice: 280000,
+    price: 95000,
+    oldPrice: 150000,
     description: 'This is a chic DD blonde wig that offers a sleek and modern look. Suitable for both casual and formal occasions.',
     hairtype: 'human hair',
     length: '16 inches',
@@ -131,8 +131,8 @@ const bestSellers = [
     id: 12,
     image: twelvethwig,
     name: 'DD brown root blonde',
-    price: 250000,
-    oldPrice: 280000,
+    price: 95000,
+    oldPrice: 150000,
     description: 'This is a trendy DD brown root blonde wig that delivers a bold and fashionable style. Perfect for making a statement.',
     hairtype: 'human hair',
     length: '16 inches',
@@ -159,6 +159,8 @@ function Catalogue() {
         {bestSellers.map((product) => (
           <div key={product.id} className='product-card'>
             <img src={product.image} alt={product.name} className='product-image' />
+            
+
             <h2 className='product-name'>{product.name}</h2>  
             <div className='product-prices'>
               <span className='product-price'>₦{product.price.toLocaleString()}</span>
@@ -171,6 +173,8 @@ function Catalogue() {
             </div>
             <p className='product-description'>{product.description}</p>
             <button className='add-to-cart-button' onClick={onClick}>Add to Cart</button>
+
+
           </div>
         ))}
       </div>

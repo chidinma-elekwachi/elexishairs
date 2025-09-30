@@ -27,10 +27,21 @@ function MyNav() {
       <div className="logo-container">
         <img src={logo} alt="Elexishairs Logo" className="logo" />
       </div>
+      <div className='nav-small'>
+        <li>
+            <Link
+              to="/cart"
+              className={isActive('/cart') ? 'active' : ''}
+              onClick={closeMenu}
+            >
+              <FaShoppingCart className="cart-icon" />
+            </Link>
+          </li>
+        <button className="hamburger" onClick={toggleMenu}>
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+      </div>
       
-      <button className="hamburger" onClick={toggleMenu}>
-        {menuOpen ? <FaTimes /> : <FaBars />}
-      </button>
       
       <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
         <li>
@@ -70,14 +81,14 @@ function MyNav() {
           </Link>
         </li>
         <li>
-          <Link
-            to="/cart"
-            className={isActive('/cart') ? 'active' : ''}
-            onClick={closeMenu}
-          >
-            <FaShoppingCart className="cart-icon" />
-          </Link>
-        </li>
+            <Link
+              to="/cart"
+              className={isActive('/cart') ? 'active' : ''}
+              onClick={closeMenu}
+            >
+              <FaShoppingCart className="cart-icon1" />
+            </Link>
+          </li>
         <li>
           <Link
             to="/login"
