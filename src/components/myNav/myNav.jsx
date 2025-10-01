@@ -72,15 +72,6 @@ function MyNav() {
           </Link>
         </li>
         <li>
-          <Link
-            to="/contact"
-            className={isActive('/contact') ? 'active' : ''}
-            onClick={closeMenu}
-          >
-            Contact
-          </Link>
-        </li>
-        <li>
             <Link
               to="/cart"
               className={isActive('/cart') ? 'active' : ''}

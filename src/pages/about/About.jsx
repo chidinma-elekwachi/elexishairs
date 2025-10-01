@@ -2,7 +2,7 @@ import React from 'react'
 
 function about() {
   return (
-    <div>about</div>
+    <div>About Elexishairs- Affordable + luxury hair brand</div>
   )
 }
 
