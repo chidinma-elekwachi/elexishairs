@@ -11,7 +11,8 @@ import Cart from './components/cart/Cart';
 import Checkout from './components/checkout/Checkout';
 
 import MyNav from './components/myNav/myNav'
-import myFooter from './components/myFooter/myFooter';
+import Footer from './components/footer/Footer';
+
 
 function App() {
   return (
@@ -27,8 +28,7 @@ function App() {
 
         <Route path="/checkout" element={<Checkout />} />
       </Routes>
-
-      <myFooter />
+      <Footer />
     </Router>
   )
 }
