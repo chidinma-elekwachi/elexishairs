@@ -7,7 +7,7 @@ import Catalogue from "./pages/catalogue/Catalogue"
 import Offers from './pages/offers/Offers';
 
 import About from './pages/about/About';
-import Cart from './components/cart/Cart';
+import { Cart } from './components/cart/Cart';
 import Checkout from './components/checkout/Checkout';
 
 import MyNav from './components/myNav/myNav'
