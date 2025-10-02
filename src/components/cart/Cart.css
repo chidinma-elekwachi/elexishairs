@@ -3,7 +3,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+}
+.cart-container{
+    margin-top: 50px;
 }
 .emptyCart{
   display: flex;
