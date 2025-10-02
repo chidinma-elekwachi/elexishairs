@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { ShopContext } from "../../context/shop-context";
-import './cart.css';
+import './Cart.css';
 
 export default function CartProduct({ data }) {
   const { id, name, image, price, description } = data;

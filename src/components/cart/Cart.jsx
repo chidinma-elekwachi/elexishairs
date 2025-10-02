@@ -3,7 +3,7 @@ import { ShopContext } from "../../context/shop-context";
 import { BESTSSELLERS } from "../../pages/products";
 import CartProduct from "./CartProduct";
 import { useNavigate } from "react-router-dom";
-import './cart.css';
+import './Cart.css';
 
 const PRODUCTS = BESTSSELLERS;
 
