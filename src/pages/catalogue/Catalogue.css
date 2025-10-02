@@ -11,8 +11,31 @@
   height: 50%;
     border-radius: 8px;
 }
+.cataIntro{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  height: 60vh;
+  margin: 30px 10px;
+  background-image: url(../../assets/coverimage.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: pink;
 
-.product-card:hover {
+}
+
+.cataIntro p {
+  font-size: 1.3rem;
+  width: 60%;
+  text-align: center;
+  color: white;
+  display: none;
+}
+
+.myproducts:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
@@ -31,7 +54,7 @@
     margin: 10px 0;
 }
 
-.product-card {
+.myproducts {
     flex: 1 1 calc(25% - 20px); 
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -44,12 +67,13 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 5px;
+    max-width: 300px;
 }
 
 
 @media (max-width: 900px) {
-  .product-card {
-    flex: 1 1 calc(50% - 40px); /* 2 per row */
+  .myproducts {
+    flex: 1 1 calc(50% - 40px); 
     max-width: calc(50% - 40px);
   }
 }
@@ -59,7 +83,7 @@
     flex-direction: column;
     align-items: center;
   }
-  .product-card {
+  .myproducts {
     flex: 1 1 100%;
     max-width: 100%;
   }

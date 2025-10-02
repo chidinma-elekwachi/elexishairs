@@ -13,9 +13,12 @@ import Checkout from './components/checkout/Checkout';
 import MyNav from './components/myNav/myNav'
 import Footer from './components/footer/Footer';
 
+import { ShopContextProvider } from './context/shop-context';
+
 
 function App() {
   return (
+    <ShopContextProvider>
     <Router>
       <MyNav />
       <Routes>
@@ -30,6 +33,7 @@ function App() {
       </Routes>
       <Footer />
     </Router>
+    </ShopContextProvider>
   )
 }
 
