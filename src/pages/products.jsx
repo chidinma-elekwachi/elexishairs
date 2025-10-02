@@ -1,16 +1,16 @@
 
-import firstwig from '../assets/16inchfrontalJerrycurl.jpg'
-import secondwig from '../assets/18inchpixiesddwig.jpg'
-import thirdwig from '../assets/2x6DDdeepwave.jpg'
-import forthwig from '../assets/20inchpixiebundle.jpg'
-import fifthwig from '../assets/4x4brownbobwig.jpg'
-import sixthwig from '../assets/20inchpixiebundleand4x4.jpg'
-import seventhwig from '../assets/4x4jerrycurlwig.jpg'
-import eighthwig from '../assets/5x5orangebounce.jpg'
-import ninthwig from '../assets/5x5pianobounce.jpg'
-import tenthwig from '../assets/bodywave.jpg'
-import eleventhwig from '../assets/ddblondewig.jpg'
-import twelvethwig from '../assets/ddbrownrootblonde.jpg'
+import firstwig from '../assets/curly/16inchfrontalJerrycurl.jpg'
+import secondwig from '../assets/curly/18inchpixiesddwig.jpg'
+import thirdwig from '../assets/curly/2x6DDdeepwave.jpg'
+import forthwig from '../assets/curly/20inchpixiebundle.jpg'
+import fifthwig from '../assets/straight/4x4brownbobwig.jpg'
+import sixthwig from '../assets/curly/20inchpixiebundleand4x4.jpg'
+import seventhwig from '../assets/curly/4x4jerrycurlwig.jpg'
+import eighthwig from '../assets/bouncy/5x5orangebounce.jpg'
+import ninthwig from '../assets/bouncy/5x5pianobounce.jpg'
+import tenthwig from '../assets/bouncy/bodywave.jpg'
+import eleventhwig from '../assets/straight/ddblondewig.jpg'
+import twelvethwig from '../assets/straight/ddbrownrootblonde.jpg'
 
 export const BESTSSELLERS = [
   {

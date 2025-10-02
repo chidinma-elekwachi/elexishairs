@@ -30,15 +30,18 @@ export const Cart = () => {
       {totalAmount > 0 ? (
         <div className="checkout">
           <p>Subtotal: ₦{totalAmount.toLocaleString()}</p>
-          <button onClick={() => navigate("/")}>Continue Shopping</button>
-          <button
-            onClick={() => {
-              checkout();
-              navigate("/checkout");
-            }}
-          >
-            Checkout
-          </button>
+          <div className="options">
+            <button onClick={() => navigate("/")}>Continue Shopping</button>
+            <button
+              onClick={() => {
+                checkout();
+                navigate("/checkout");
+              }}
+            >
+              Checkout
+            </button>          
+          </div>
+
         </div>
       ) : (
       <div className='emptyCart'>

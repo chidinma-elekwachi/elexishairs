@@ -12,6 +12,7 @@ import Checkout from './components/checkout/Checkout';
 
 import MyNav from './components/myNav/myNav'
 import Footer from './components/footer/Footer';
+import whatsappIcon from './assets/whatsappIcon.png';
 
 import { ShopContextProvider } from './context/shop-context';
 
@@ -31,6 +32,15 @@ function App() {
 
         <Route path="/checkout" element={<Checkout />} />
       </Routes>
+
+      <a 
+          href="https://wa.me/2349138661387" 
+          target="_blank" 
+          rel="noreferrer"
+          className="whatsapp-float"
+        >
+          <img src={whatsappIcon} alt="WhatsApp" className="whatsapp-icon" />
+        </a>
       <Footer />
     </Router>
     </ShopContextProvider>
