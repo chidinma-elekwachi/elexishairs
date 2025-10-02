@@ -10,7 +10,6 @@ export default function Footer() {
         <div className="social-links">    
         <div>    
           <a href="https://wa.me/2349138661387"><img src={logo} alt="elexishairs" className="ehairslogo" /></a>
-          <h4>Elexishairs</h4>
           <p>Affordable Luxury at your doorstep.</p>
         </div>
 
@@ -19,7 +18,7 @@ export default function Footer() {
 
           <a href="https://wa.me/2349138661387" target="_blank" rel="noreferrer">WhatsApp</a>
           <a href="https://instagram.com/elexishairs.ng" target="_blank" rel="noreferrer">Instagram</a>
-          <a href="https://tiktok.com/elexishairs.ng" target="_blank" rel="noreferrer">Tiktok</a>
+          <a href="https://tiktok.com/@elexishairs.ng" target="_blank" rel="noreferrer">Tiktok</a>
         </div>
 
         <div className="footlinks">
