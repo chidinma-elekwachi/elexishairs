@@ -77,6 +77,10 @@
   height: 30px;
 
 }
+.subtotal{
+  font-size: 1.6rem;
+  margin: 10px 0;
+}
 
 .checkout{
     display: flex;
