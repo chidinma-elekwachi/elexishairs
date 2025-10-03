@@ -3,12 +3,13 @@
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
-    padding: 20px;
+    padding: 10px;
 }
 
 .catalogue-container img{
   width: 100%;
-  height: 50%;
+    height: 200px;
+    object-fit: cover;
     border-radius: 8px;
 }
 .cataIntro{
@@ -24,13 +25,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
-  padding: 30px;
+  padding: 50px 30px;
 
 }
 
 .cataIntro p {
   font-size: 1.3rem;
-  width: 60%;
   text-align: center;
   color: white;
 }
@@ -69,11 +69,16 @@
     gap: 5px;
     max-width: 300px;
 }
+.product-price{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: palevioletred;
+}
 
 
 @media (max-width: 900px) {
   .myproducts {
-    flex: 1 1 calc(50% - 40px); 
+    flex: 1 1 calc(33% - 40px); 
     max-width: calc(50% - 40px);
   }
 }
@@ -84,15 +89,23 @@
 
 @media (max-width: 600px) {
   .products {
-    flex-direction: column;
+    display: flex;
     align-items: center;
   }
   .myproducts {
-    flex: 1 1 100%;
-    max-width: 100%;
+    flex: 1 1 50%;
+    max-width: calc(50% - 20px);
   }
   .catalogue-container h1{
     font-size: 2rem;
     margin-bottom: 20px;
+  }
+  .cataIntro{
+    height: auto;
+    padding: 50px 30px;
+  }
+  .catalogue-container img{
+    height: 100px;
+    object-fit: cover;
   }
 }

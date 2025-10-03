@@ -9,7 +9,7 @@ const getDiscountPercent = (oldPrice, price) => {
 
 
 export const Product = (props) => {
-  const { id, name, image, price, oldPrice, description} = props.data;
+  const { id, name, image, price, oldPrice} = props.data;
   const { addToCart, cartItems } = useContext(ShopContext);
 
   const cartItemCount = cartItems[id];
@@ -19,8 +19,9 @@ export const Product = (props) => {
           <img src={image} alt={name} className='product-image' />
 
           <h2 className='product-name'>{name}</h2>
+          <span className='product-price'>₦{price.toLocaleString()}</span>
+
           <div className='product-prices'>
-            <span className='product-price'>₦{price.toLocaleString()}</span>
             <span
               className='product-old-price'
               style={{ textDecoration: 'line-through', color: '#888', marginLeft: '10px' }}
@@ -32,7 +33,7 @@ export const Product = (props) => {
             </span>
           </div>
 
-          <p className='product-description'>{description}</p>
+          {/* <p className='product-description'>{description}</p> */}
           {/* <button className='add-to-cart-button'>
             {cartItemCount > 0 && <>({cartItemCount})</>}
           </button> */}
