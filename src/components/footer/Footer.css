@@ -48,6 +48,10 @@
   justify-content: center;
   align-items: center;
 }
+.footer {
+  border-top: 1px solid gold;
+  margin-top: 50px;
+}
 
 @media (max-width: 768px) {
 

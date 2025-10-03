@@ -77,6 +77,10 @@
     max-width: calc(50% - 40px);
   }
 }
+.cartButt{
+  color: palevioletred;
+  border: 2px solid palevioletred;
+}
 
 @media (max-width: 600px) {
   .products {

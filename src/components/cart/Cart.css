@@ -103,4 +103,12 @@
         width: 100%;
         height: auto;
     }
+    .checkout button{
+        background-color: palevioletred;
+        color: white;
+        margin-top: 10px;
+    }
+    .options {
+      margin-top: 30px;
+    }
 }
