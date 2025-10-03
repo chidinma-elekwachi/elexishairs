@@ -68,7 +68,7 @@
 }
 
 .cart-icon {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: var(--pink);
   display: none;
 }
@@ -101,7 +101,7 @@
     position: fixed;
     top: 60px;
     right: 0;
-    width: 50%;
+    width: 60%;
     height: calc(100vh - 60px);
     background: #fff;
     flex-direction: column;
@@ -132,6 +132,11 @@
   }
   .cart-icon1{
     display: none;
+  }
+  .cart-icon1 a:hover,
+  .cart-icon1 a.active {
+    box-shadow: none;
+    background: none;
   }
   
 }

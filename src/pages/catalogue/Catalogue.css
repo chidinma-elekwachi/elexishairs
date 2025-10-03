@@ -23,7 +23,8 @@
   background-image: url(../../assets/coverimage.png);
   background-repeat: no-repeat;
   background-size: cover;
-  color: pink;
+  color: white;
+  padding: 30px;
 
 }
 
@@ -32,7 +33,6 @@
   width: 60%;
   text-align: center;
   color: white;
-  display: none;
 }
 
 .myproducts:hover {

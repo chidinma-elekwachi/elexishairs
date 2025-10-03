@@ -12,10 +12,11 @@ function Catalogue() {
     <div className='catalogue-container'>
       <div className='cataIntro'>
         <h1>Welcome to Elexis Hairs</h1>
-        <p className='catalogue-intro'>Discover our exclusive collection of premium hair products, designed to enhance your natural beauty and boost your confidence. From luxurious extensions to nourishing care essentials, we have everything you need to achieve the perfect look. Explore our catalogue and find your new favorite today!</p>
+        <p className='catalogue-intro'>From virgin human hair to luxury hairs, we have everything you need to achieve the perfect look. Explore our catalogue and find your new favorite today!</p>
+        <button><a href='#prod'>Check Catalogue</a></button>
       </div>
 
-      <div className='products'>
+      <div className='products' id='prod'>
         {PRODUCTS.map((product) => (
           <Product key={product.id} data={product} />
         ))}
