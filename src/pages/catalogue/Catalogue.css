@@ -28,7 +28,9 @@
   padding: 50px 30px;
 
 }
-
+.cataIntro a{
+  color: palevioletred;
+}
 .cataIntro p {
   font-size: 1.3rem;
   text-align: center;
