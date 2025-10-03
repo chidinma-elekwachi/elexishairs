@@ -10,9 +10,9 @@ const getDiscountPercent = (oldPrice, price) => {
 
 export const Product = (props) => {
   const { id, name, image, price, oldPrice} = props.data;
-  const { addToCart, cartItems } = useContext(ShopContext);
+  const { cartItems, addToCart, updateCartItemCount } = useContext(ShopContext);
 
-  const cartItemCount = cartItems[id];
+  // const cartItemCount = cartItems[id];
 
   return (
         <div className='myproducts'>
@@ -37,9 +37,17 @@ export const Product = (props) => {
           {/* <button className='add-to-cart-button'>
             {cartItemCount > 0 && <>({cartItemCount})</>}
           </button> */}
+          <div className="product-CTA">
+          <input
+            value={cartItems[id]}
+            className="cart-input"
+            onChange={(e) => updateCartItemCount(Number(e.target.value), id)}
+          />
           <button className='add-to-cart-button' onClick={() => addToCart(id)}>
-            Add to Cart {cartItemCount > 0 && <>({cartItemCount})</>}
+            Add to Cart
           </button>
+          </div>
+
         </div>
   );
 }

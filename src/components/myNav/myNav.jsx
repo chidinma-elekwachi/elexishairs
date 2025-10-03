@@ -3,6 +3,10 @@ import { Link, useLocation } from 'react-router-dom';
 import { FaShoppingCart, FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../../assets/elexishairlogo.png';
 import './myNav.css';
+import { ShopContext } from "../../context/shop-context";
+import { BESTSSELLERS } from "../../pages/products";
+import { useContext } from 'react';
+const PRODUCTS = BESTSSELLERS;
 
 function MyNav() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,19 +26,34 @@ function MyNav() {
     closeMenu();
   }, [location]);
 
+  const { cartItems} = useContext(ShopContext);
+
+  const getTotalCartCount = () => {
+    let totalCount = 0;
+    for (const item in cartItems) {
+      totalCount += cartItems[item];
+    }
+    return totalCount;
+  };
+
+  const totalCount = getTotalCartCount();
+
   return (
     <nav className="navbar">
       <div className="logo-container">
         <img src={logo} alt="Elexishairs Logo" className="logo" />
       </div>
       <div className='nav-small'>
-        <li>
+        <li className='cart-icon-wrapper'>
             <Link
               to="/cart"
               className={isActive('/cart') ? 'active' : ''}
               onClick={closeMenu}
             >
               <FaShoppingCart className="cart-icon" />
+              {totalCount > 0 && (
+                <span className="cart-badge">{totalCount > 99 ? "99+" : totalCount}</span>
+              )}
             </Link>
           </li>
         <button className="hamburger" onClick={toggleMenu}>
