@@ -90,13 +90,16 @@ function MyNav() {
             Offers
           </Link>
         </li>
-        <li>
+        <li className='cart-icon-wrapper1'>
             <Link
               to="/cart"
               className={isActive('/cart') ? 'active' : ''}
               onClick={closeMenu}
             >
               <FaShoppingCart className="cart-icon1" />
+              {totalCount > 0 && (
+                <span className="cart-badge1">{totalCount > 99 ? "99+" : totalCount}</span>
+              )}
             </Link>
           </li>
         <li>

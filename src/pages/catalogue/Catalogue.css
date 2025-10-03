@@ -88,7 +88,7 @@
     max-width: 300px;
 }
 .product-price{
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     font-weight: bold;
     color: palevioletred;
 }
@@ -138,5 +138,8 @@
   .cataIntro p{
     font-size: 1.2rem;
     padding: 0;
+  }
+  .product-name{
+    font-size: 1.3rem;
   }
 }
