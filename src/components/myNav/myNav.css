@@ -111,9 +111,6 @@
   min-width: 20px;
   text-align: center;
 }
-.cart-badge{
-  display: none;
-}
 
 @media (max-width: 768px) {
   .navbar {
@@ -176,9 +173,7 @@
 .cart-icon-wrapper i {
   font-size: 24px;
 }
-.cart-icon-wrapper1 {
-  display: none;
-}
+
 .cart-badge {
   position: absolute;
   top: -5px;
@@ -193,6 +188,9 @@
   text-align: center;
 }
 .cart-badge1 {
+  display: none;
+}
+.cart-icon-wrapper1 {
   display: none;
 }
   
