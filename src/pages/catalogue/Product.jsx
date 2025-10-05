@@ -12,7 +12,6 @@ export const Product = (props) => {
   const { id, name, image, price, oldPrice} = props.data;
   const { cartItems, addToCart, updateCartItemCount } = useContext(ShopContext);
 
-  // const cartItemCount = cartItems[id];
 
   return (
         <div className='myproducts'>

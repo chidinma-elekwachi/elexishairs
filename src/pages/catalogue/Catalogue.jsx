@@ -4,22 +4,22 @@ import Product from './Product';
 import { BESTSSELLERS } from '../products';
 
 const PRODUCTS = BESTSSELLERS;
+const ITEMS_PER_PAGE = 12;
 
 function Catalogue() {
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceSort, setPriceSort] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
 
   // 🔍 Filter + Sort Logic
   const filteredProducts = PRODUCTS
     .filter((product) => {
-      // Search filter
       const matchesSearch = product.name
         .toLowerCase()
         .includes(searchTerm.toLowerCase());
 
-      // Category filter
       if (selectedCategory === 'all') return matchesSearch;
       if (selectedCategory === 'curly')
         return matchesSearch && product.image.includes('/curly/');
@@ -34,6 +34,19 @@ function Catalogue() {
       if (priceSort === 'highest') return b.price - a.price;
       return 0;
     });
+
+  // 📄 Pagination logic
+  const totalPages = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE);
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const currentProducts = filteredProducts.slice(
+    startIndex,
+    startIndex + ITEMS_PER_PAGE
+  );
+
+  // 👇 Reset to first page when filters/search change
+  React.useEffect(() => {
+    setCurrentPage(1);
+  }, [searchTerm, selectedCategory, priceSort]);
 
   return (
     <div className="catalogue-container">
@@ -94,14 +107,45 @@ function Catalogue() {
 
       {/* 🛍 Products */}
       <div className="products" id="prod">
-        {filteredProducts.length > 0 ? (
-          filteredProducts.map((product) => (
+        {currentProducts.length > 0 ? (
+          currentProducts.map((product) => (
             <Product key={product.id} data={product} />
           ))
         ) : (
           <p className="no-results">No products match your filters.</p>
         )}
       </div>
+
+      {/* 🔢 Pagination Controls */}
+      {totalPages > 1 && (
+        <div className="pagination">
+          <button
+            onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+            disabled={currentPage === 1}
+          >
+            ◀
+          </button>
+
+          {[...Array(totalPages)].map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentPage(index + 1)}
+              className={currentPage === index + 1 ? 'active-page' : ''}
+            >
+              {index + 1}
+            </button>
+          ))}
+
+          <button
+            onClick={() =>
+              setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+            }
+            disabled={currentPage === totalPages}
+          >
+            ▶
+          </button>
+        </div>
+      )}
 
       {/* 🛒 Cart Button */}
       <button className="cartButt" onClick={() => navigate('/cart')}>

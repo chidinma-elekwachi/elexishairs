@@ -11,6 +11,9 @@ import ninthwig from '../assets/bouncy/5x5pianobounce.jpg'
 import tenthwig from '../assets/bouncy/bodywave.jpg'
 import eleventhwig from '../assets/straight/ddblondewig.jpg'
 import twelvethwig from '../assets/straight/ddbrownrootblonde.jpg'
+import thirteenthwig from '../assets/straight/frontalbrownbobwig.jpg'
+import fourteenthwig from '../assets/bouncy/sddbouncebundles4x4.jpg'
+import fifteenthwig from '../assets/curly/deepwaveFrontal.jpg'
 
 export const BESTSSELLERS = [
   {
@@ -136,6 +139,36 @@ export const BESTSSELLERS = [
     hairtype: 'human hair',
     length: '16 inches',
     color: 'brown with blonde roots',
-  }
+  },
+  {    id: 13,
+    image: thirteenthwig,
+    name: 'Frontal brown bob wig',
+    price: 75000,
+    oldPrice: 90000,
+    description: 'This is a stylish frontal brown bob wig that provides a sophisticated and elegant look. Great for any occasion.',
+    hairtype: 'human hair',
+    length: '12 inches',
+    color: 'brown',
+  },
+  {    id: 14,
+    image: fourteenthwig,
+    name: 'SDD bounce bundles with 4x4 closure',
+    price: 300000,
+    oldPrice: 350000,
+    description: 'This is a luxurious SDD bounce bundles with 4x4 closure that offers a voluminous and glamorous appearance. Ideal for special events.',
+    hairtype: 'human hair',
+    length: '20 inches',
+    color: 'natural black',
+  },
+  {    id: 15,
+    image: fifteenthwig,
+    name: 'Deep wave frontal wig',
+    price: 120000,
+    oldPrice: 180000,
+    description: 'This is a beautiful deep wave frontal wig that gives you a natural and elegant look. Perfect for any occasion.',
+    hairtype: 'human hair',
+    length: '16 inches',
+    color: 'natural black',
+  },
 
 ] 
