@@ -102,7 +102,7 @@ function MyNav() {
               )}
             </Link>
           </li>
-        <li>
+        {/* <li>
           <Link
             to="/login"
             className={isActive('/login') ? 'active' : ''}
@@ -119,7 +119,7 @@ function MyNav() {
           >
             Register
           </Link>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );

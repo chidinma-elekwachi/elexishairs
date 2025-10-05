@@ -209,8 +209,8 @@
 }
 
 .shop-now-btn:hover {
+    color: white;
   background-color: palevioletred;
-  color: white;
   transform: scale(1.05);
 }
 
