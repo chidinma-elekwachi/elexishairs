@@ -96,6 +96,7 @@ function MyNav() {
               className={isActive('/cart') ? 'active' : ''}
               onClick={closeMenu}
             >
+              
               <FaShoppingCart className="cart-icon1" />
               {totalCount > 0 && (
                 <span className="cart-badge1">{totalCount > 99 ? "99+" : totalCount}</span>

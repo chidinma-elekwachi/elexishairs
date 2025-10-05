@@ -14,7 +14,7 @@ const CartProduct = ({ data }) => {
         <div className="cart-top">
           <div className="cart-info">
             <h3 className="cart-name">{name}</h3>
-            <p className="cart-price">₦{price.toLocaleString()}</p>
+            <p className="cart-price"> Unit Price: ₦{price.toLocaleString()}</p>
           </div>
 
           <div className="cart-quantity">

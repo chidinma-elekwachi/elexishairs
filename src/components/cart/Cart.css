@@ -102,20 +102,6 @@
   color: #fff;
 }
 
-.options button {
-  
-}
-
-.options button:first-child {
-  background-color: white;
-  color: #e91e63;
-  border: 1px solid #e91e63;
-}
-
-.options button:last-child {
-  background-color: #e91e63;
-  color: white;
-}
 
 .cart-quantity input {
   width: 40px;
@@ -300,5 +286,100 @@
   .emptyCart {
     width: 95%;
     padding: 20px;
+  }
+}
+/* === Popup Overlay === */
+.payment-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* === Popup Content Box === */
+.popup-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 90%;
+  width: 380px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: popup-fade-in 0.3s ease;
+}
+
+.popup-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.popup-content p {
+  font-size: 0.95rem;
+  color: #444;
+  margin: 0.5rem 0;
+}
+
+.popup-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.paid-btn {
+  background-color: #222;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.paid-btn:hover {
+  background-color: #000;
+}
+
+.cancel-btn {
+  background: #e6e6e6;
+  color: #333;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.cancel-btn:hover {
+  background: #ccc;
+}
+
+@keyframes popup-fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* === For small screens === */
+@media (max-width: 500px) {
+  .popup-content {
+    width: 90%;
+    padding: 1.5rem;
+  }
+  .popup-content h3 {
+    font-size: 1.2rem;
+  }
+  .popup-content p {
+    font-size: 0.9rem;
   }
 }

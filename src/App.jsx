@@ -8,7 +8,6 @@ import Offers from './pages/offers/Offers';
 
 import About from './pages/about/About';
 import { Cart } from './components/cart/Cart';
-import Checkout from './components/checkout/Checkout';
 
 import MyNav from './components/myNav/myNav'
 import Footer from './components/footer/Footer';
@@ -30,7 +29,6 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
-        <Route path="/checkout" element={<Checkout />} />
       </Routes>
 
       <a 

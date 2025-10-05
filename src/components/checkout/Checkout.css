@@ -1,0 +1,151 @@
+.checkout-wrapper {
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.checkout-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.checkout-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px;
+  padding: 15px 20px;
+  background-color: #fff0f5;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.checkout-item img {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.checkout-item-details {
+  flex: 1;
+  text-align: left;
+  margin-left: 15px;
+}
+
+.checkout-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.checkout-price {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.checkout-total {
+  font-size: 1.3rem;
+  margin: 20px 0;
+  color: #d63384;
+  font-weight: 600;
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkout-form input,
+.checkout-form select {
+  padding: 12px;
+  border: 1px solid #ffd6e0;
+  border-radius: 8px;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.place-order {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.place-order:hover {
+  background-color: #e7549e;
+}
+
+/* Popup styling */
+.payment-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  width: 320px;
+  text-align: center;
+}
+
+.popup-content h3 {
+  color: #d63384;
+  margin-bottom: 10px;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.paid-btn {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background-color: #ddd;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .checkout-item {
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .checkout-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .popup-content {
+    width: 90%;
+  }
+}
