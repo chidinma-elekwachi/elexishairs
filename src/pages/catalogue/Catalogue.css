@@ -27,6 +27,11 @@
   color: white;
   padding: 50px 30px;
 }
+.product-name{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 5px 0;
+}
 
 .cataIntro a{
   color: palevioletred;
@@ -99,6 +104,7 @@
     flex: 1 1 calc(33% - 40px); 
     max-width: calc(50% - 40px);
   }
+  
 }
 .cartButt{
   color: palevioletred;
@@ -140,6 +146,6 @@
     padding: 0;
   }
   .product-name{
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 }
