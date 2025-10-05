@@ -32,11 +32,6 @@ export const Product = (props) => {
               -{getDiscountPercent(oldPrice, price)}%
             </span>
           </div>
-
-          {/* <p className='product-description'>{description}</p> */}
-          {/* <button className='add-to-cart-button'>
-            {cartItemCount > 0 && <>({cartItemCount})</>}
-          </button> */}
           <div className="product-CTA">
           <input
             value={cartItems[id]}
