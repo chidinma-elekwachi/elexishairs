@@ -332,8 +332,8 @@
 }
 
 .paid-btn {
-  background-color: #222;
-  color: #fff;
+  background-color: #e91e63;
+    color: white;
   border: none;
   padding: 0.7rem 1.4rem;
   border-radius: 8px;
@@ -342,7 +342,7 @@
 }
 
 .paid-btn:hover {
-  background-color: #000;
+  transform: scale(1.05);
 }
 
 .cancel-btn {
@@ -382,4 +382,19 @@
   .popup-content p {
     font-size: 0.9rem;
   }
+}
+
+.name-input {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 0.95rem;
+  transition: 0.2s;
+}
+
+.name-input:focus {
+  border-color: #000;
 }

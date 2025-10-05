@@ -11,18 +11,29 @@ export const Cart = () => {
   const { cartItems, getTotalCartAmount, checkout } = useContext(ShopContext);
   const totalAmount = getTotalCartAmount();
   const [showPopup, setShowPopup] = useState(false);
+  const [customerName, setCustomerName] = useState("");
   const navigate = useNavigate();
 
   const deliveryFee = 15000;
-
   const deliveryMessage =
     totalAmount >= 300000
       ? "Free delivery on orders above ₦300,000."
       : "Free delivery on your first order.";
 
+  // create message string
+  const getOrderSummary = () => {
+    let summary = "";
+    PRODUCTS.forEach((product) => {
+      if (cartItems[product.id] > 0) {
+        summary += `${cartItems[product.id]} x ${product.name}, `;
+      }
+    });
+    return summary.trim().replace(/,\s*$/, "");
+  };
+
   const handlePaymentDone = () => {
-    const totalItems = Object.values(cartItems).reduce((a, b) => a + b, 0);
-    const message = `I just paid ₦${totalAmount.toLocaleString()} for ${totalItems} wigs. I want to follow up with my order.`;
+    const productSummary = getOrderSummary();
+    const message = `Hello, I just made a payment of ₦${totalAmount.toLocaleString()} for the following items: ${productSummary}. My name is ${customerName}. I’d like to follow up with my order.`;
     const whatsappUrl = `https://wa.me/2349138661387?text=${encodeURIComponent(
       message
     )}`;
@@ -62,7 +73,7 @@ export const Cart = () => {
           <hr className="divider" />
 
           <p className="total">Total: ₦{totalAmount.toLocaleString()}</p>
-
+          <p> PLEASE SCREENSHOT YOUR CART BEFORE CHECKOUT!</p>
           <div className="options">
             <button onClick={() => navigate("/")}>Continue Shopping</button>
             <button onClick={() => setShowPopup(true)}>Checkout</button>
@@ -90,8 +101,24 @@ export const Cart = () => {
               <strong>Name:</strong> Elekwachi Chidinma Salome
             </p>
 
+            <input
+              type="text"
+              placeholder="Enter your name"
+              className="name-input"
+              value={customerName}
+              onChange={(e) => setCustomerName(e.target.value)}
+            />
             <div className="popup-buttons">
-              <button onClick={handlePaymentDone} className="paid-btn">
+              <button
+                onClick={() => {
+                  if (!customerName.trim()) {
+                    alert("Please enter your name before continuing.");
+                    return;
+                  }
+                  handlePaymentDone();
+                }}
+                className="paid-btn"
+              >
                 I Have Paid
               </button>
               <button

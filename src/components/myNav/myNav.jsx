@@ -41,7 +41,9 @@ function MyNav() {
   return (
     <nav className="navbar">
       <div className="logo-container">
-        <img src={logo} alt="Elexishairs Logo" className="logo" />
+        <a href="/">
+          <img src={logo} alt="Elexis Hairs Logo" className="logo" />
+        </a>
       </div>
       <div className='nav-small'>
         <li className='cart-icon-wrapper'>

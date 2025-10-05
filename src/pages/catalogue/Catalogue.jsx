@@ -69,7 +69,7 @@ function Catalogue() {
 
       {/* 💖 Hero Section */}
       <div className="cataIntro">
-        <h1>
+        <h1 className='catalogue-h1'>
           Welcome to <span className="brand-name">Elexis Hairs</span>
         </h1>
         <p className="catalogue-p">
