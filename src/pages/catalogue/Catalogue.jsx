@@ -22,11 +22,11 @@ function Catalogue() {
 
       if (selectedCategory === 'all') return matchesSearch;
       if (selectedCategory === 'curly')
-        return matchesSearch && product.image.includes('/curly/');
+        return matchesSearch && product.texture === 'Curly';
       if (selectedCategory === 'straight')
-        return matchesSearch && product.image.includes('/straight/');
+        return matchesSearch && product.texture === 'Straight';
       if (selectedCategory === 'bouncy')
-        return matchesSearch && product.image.includes('/bouncy/');
+        return matchesSearch && product.texture === 'Bouncy';
       return matchesSearch;
     })
     .sort((a, b) => {
